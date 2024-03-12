@@ -97,9 +97,9 @@ function App() {
 					name += " - 2";
 				}
 			}
-
-			newZip.file(name + ".jpg", zipEntry.async("arraybuffer"));
-			newNames.push([zipEntry.name, name + ".jpg"]);
+			const mimeType = zipEntry.name.split(".")[1];
+			newZip.file(name + "." + mimeType, zipEntry.async("arraybuffer"));
+			newNames.push([zipEntry.name, name + "." + mimeType]);
 		});
 
 		const newBlob = await newZip.generateAsync({ type: "blob" });
