@@ -1,0 +1,12 @@
+.file-upload {
+	border: 1px dashed black;
+	height: 100px;
+	width: 100px;
+	padding: 10px;
+	margin: 10px;
+	overflow: hidden;
+}
+
+.dropZone {
+	margin: auto;
+}
